@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Consent Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Language Selector -->
+  <select id="language-select">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+  </select>
+
+  <!-- Consent Banner -->
+  <div id="consent-banner" class="banner">
+    <p></p>
+    <div>
+      <button id="accept-btn">Accept</button>
+      <button id="reject-btn">Reject</button>
+      <button onclick="openPreferences()">Preferences</button>
+    </div>
+  </div>
+
+  <!-- Preferences Modal -->
+  <div id="preferences-modal" class="modal">
+    <h3>Cookie Preferences</h3>
+    <label><input type="checkbox" checked disabled /> Functional (required)</label><br/>
+    <label><input type="checkbox" id="analytics" /> Analytics</label><br/>
+    <label><input type="checkbox" id="marketing" /> Marketing</label><br/>
+    <button onclick="savePreferences()">Save Preferences</button>
+  </div>
+
+  <!-- Tracking Log -->
+  <div id="tracking-log" class="log">
+    <h3>Tracking Log</h3>
+    <ul id="log-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
