@@ -1,38 +1,43 @@
+/* Apply to the entire body of the webpage */
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  font-family: Arial, sans-serif;  /* Set the font style for all text */
+  padding: 20px;                   /* Add spacing around the page content */
 }
 
+/* Style for the banner (likely a notification or cookie banner) */
 .banner {
-  background: #f4f4f4;
-  padding: 15px;
-  border: 1px solid #ccc;
-  position: fixed;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background: #f4f4f4;             /* Light gray background */
+  padding: 15px;                   /* Inner spacing */
+  border: 1px solid #ccc;          /* Light gray border */
+  position: fixed;                 /* Fixes the banner in place as the user scrolls */
+  bottom: 10px;                    /* Positions the banner 10px from the bottom */
+  left: 0;                         /* Stretches it to the left edge of the screen */
+  right: 0;                        /* Stretches it to the right edge of the screen */
+  display: flex;                   /* Uses Flexbox for layout */
+  justify-content: space-between; /* Distributes children elements evenly across */
+  align-items: center;            /* Vertically centers items in the banner */
 }
 
+/* Style for a modal dialog box */
 .modal {
-  position: fixed;
-  top: 30%;
-  left: 30%;
-  right: 30%;
-  background: #fff;
-  padding: 20px;
-  border: 2px solid #333;
-  display: none;
+  position: fixed;     /* Keeps the modal fixed in place on the screen */
+  top: 30%;            /* Position modal from top (30% down) */
+  left: 30%;           /* Position modal from left (30% across) */
+  right: 30%;          /* Modal takes up remaining 40% width (centered) */
+  background: #fff;    /* White background */
+  padding: 20px;       /* Inner spacing */
+  border: 2px solid #333; /* Dark border for visibility */
+  display: none;       /* Hidden by default (can be shown with JS) */
 }
 
+/* Style for a log or output area */
 .log {
-  margin-top: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
+  margin-top: 20px;    /* Adds spacing above the log box */
+  border: 1px solid #ccc; /* Light gray border */
+  padding: 10px;       /* Inner spacing */
 }
 
+/* Style for dropdown (select) elements */
 select {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Adds space below the dropdown */
 }

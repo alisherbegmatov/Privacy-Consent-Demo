@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Set character encoding to UTF-8 -->
   <meta charset="UTF-8" />
+  <!-- Ensure proper scaling and responsiveness on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Title for the webpage, displayed on the browser tab -->
   <title>Privacy Consent Demo</title>
+  <!-- Link to external stylesheet for styling the page -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Language Selector -->
+  <!-- Dropdown for selecting the language (English or Spanish) -->
   <select id="language-select">
-    <option value="en">English</option>
-    <option value="es">Español</option>
+    <option value="en">English</option>  <!-- Option for English -->
+    <option value="es">Español</option>  <!-- Option for Spanish -->
   </select>
 
-  <!-- Consent Banner -->
+  <!-- The consent banner that appears when the user visits the page -->
   <div id="consent-banner" class="banner">
-    <p></p>
+    <p></p>  <!-- Placeholder for the message (e.g., cookie consent message) -->
     <div>
+      <!-- Button for accepting the consent -->
       <button id="accept-btn">Accept</button>
+      <!-- Button for rejecting the consent -->
       <button id="reject-btn">Reject</button>
+      <!-- Button for opening the preferences modal -->
       <button onclick="openPreferences()">Preferences</button>
     </div>
   </div>
 
-  <!-- Preferences Modal -->
+  <!-- Modal for setting cookie preferences (will be shown when Preferences is clicked) -->
   <div id="preferences-modal" class="modal">
     <h3>Cookie Preferences</h3>
+    <!-- Label for functional cookies, always enabled and required -->
     <label><input type="checkbox" checked disabled /> Functional (required)</label><br/>
+    <!-- Label for analytics cookies -->
     <label><input type="checkbox" id="analytics" /> Analytics</label><br/>
+    <!-- Label for marketing cookies -->
     <label><input type="checkbox" id="marketing" /> Marketing</label><br/>
+    <!-- Button to save the user's preferences -->
     <button onclick="savePreferences()">Save Preferences</button>
   </div>
 
-  <!-- Tracking Log -->
+  <!-- Section to display the tracking log (to show which tracking was enabled) -->
   <div id="tracking-log" class="log">
     <h3>Tracking Log</h3>
+    <!-- Unordered list to show tracking log entries -->
     <ul id="log-list"></ul>
   </div>
 
+  <!-- Link to the external JavaScript file that will handle logic -->
   <script src="script.js"></script>
 </body>
 </html>
